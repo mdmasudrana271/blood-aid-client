@@ -47,7 +47,7 @@ const PostCard = ({ post }) => {
             <span className="font-bold">Description:</span> {post?.description}
           </p>
           <p>
-            <span className="font-bold">Blood Group:</span>
+            <span className="font-bold">Blood Group: </span>
 
             <span className="text-error font-bold">{post?.blood_group}</span>
           </p>
