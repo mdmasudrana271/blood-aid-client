@@ -36,7 +36,7 @@ DonorCard.propTypes = {
   donor: PropTypes.shape({
     id: PropTypes.number.isRequired,
     blood_group: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
+    age: PropTypes.number,
     address: PropTypes.string.isRequired,
     is_available_for_donation: PropTypes.bool.isRequired,
     last_donation_date: PropTypes.string.isRequired,

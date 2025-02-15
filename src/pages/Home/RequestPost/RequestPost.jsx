@@ -6,7 +6,7 @@ const RequestPost = () => {
   const [bloodGroup, setBloodGroup] = useState("");
   useEffect(() => {
     fetchEvent();
-  }, []);
+  }, [bloodGroup]);
 
   const fetchEvent = (bloodGroup = "") => {
     let url = `https://blood-aid-backend.onrender.com/event/bloodevents/`;
@@ -22,7 +22,6 @@ const RequestPost = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         const pendingRequests = data.filter(
           (request) => request.status === "pending"
         );
@@ -79,12 +78,12 @@ const RequestPost = () => {
         {bloodRequest.length > 0 ? (
           <div className="donor-list mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {bloodRequest.map((post) => (
-              <PostCard key={post._id} post={post}></PostCard>
+              <PostCard key={post.id} post={post}></PostCard>
             ))}
           </div>
         ) : (
           <p className="text-center text-error text-2xl font-semibold">
-            No donors found
+            No Blood Request Found
           </p>
         )}
       </div>

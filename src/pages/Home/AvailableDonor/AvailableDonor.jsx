@@ -86,12 +86,12 @@ const AvailableDonor = () => {
       {donors.length > 0 ? (
         <div className="donor-list mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {donors.map((donor) => (
-            <DonorCard key={donor._id} donor={donor}></DonorCard>
+            <DonorCard key={donor.id} donor={donor}></DonorCard>
           ))}
         </div>
       ) : (
         <p className="text-center text-error text-2xl font-semibold">
-          No donors found
+          No Donors Found
         </p>
       )}
     </div>

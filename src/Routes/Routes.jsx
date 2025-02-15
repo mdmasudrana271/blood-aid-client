@@ -15,26 +15,11 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-      },
-      {
-        path: "update_profile",
-        element: <UpdateProfile></UpdateProfile>,
-      },
-      {
-        path: "events",
-        element: <AddEvent></AddEvent>,
-      },
-      {
-        path: "request",
-        element: <BloodRequest></BloodRequest>,
-      },
-      {
-        path: "history",
-        element: <DonationHistory></DonationHistory>,
       },
       {
         path: "login",

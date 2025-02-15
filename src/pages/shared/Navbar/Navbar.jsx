@@ -6,7 +6,7 @@ const Navbar = () => {
   const { logOut } = useContext(AuthContext);
   const user = localStorage.getItem("user_id");
   return (
-    <div className="navbar bg-slate-300">
+    <div className="navbar bg-slate-300 ">
       <div className="navbar-start mx-10">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
