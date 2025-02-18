@@ -9,7 +9,7 @@ const RequestPost = () => {
   }, [bloodGroup]);
 
   const fetchEvent = (bloodGroup = "") => {
-    let url = `https://blood-aid-backend.onrender.com/event/bloodevents/`;
+    let url = `https://blood-aid-backend.vercel.app/event/bloodevents/`;
     if (bloodGroup) {
       url += `?blood_group=${bloodGroup}`;
     }

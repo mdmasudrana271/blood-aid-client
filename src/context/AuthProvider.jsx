@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
 
   const logOut = () => {
     const token = localStorage.getItem("authToken");
-    fetch("https://blood-aid-backend.onrender.com/account/logout/", {
+    fetch("https://blood-aid-backend.vercel.app/account/logout/", {
       method: "GET",
       headers: {
         Authorization: `Token ${token}`,

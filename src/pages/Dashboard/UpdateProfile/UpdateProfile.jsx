@@ -17,7 +17,7 @@ const UpdateProfile = () => {
   // const [profile, setProfile] = useState();
 
   useEffect(() => {
-    fetch(`https://blood-aid-backend.onrender.com/account/list/${donor_id}/`, {
+    fetch(`https://blood-aid-backend.vercel.app/account/list/${donor_id}/`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -55,7 +55,7 @@ const UpdateProfile = () => {
       is_available_for_donation: data.available_donation,
       blood_group: data.blood_group, // Send blood group if available
     };
-    fetch(`https://blood-aid-backend.onrender.com/account/list/${donor_id}/`, {
+    fetch(`https://blood-aid-backend.vercel.app/account/list/${donor_id}/`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

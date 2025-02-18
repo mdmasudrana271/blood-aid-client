@@ -13,7 +13,7 @@ const AvailableDonor = () => {
 
   // Fetch donors from the backend
   const fetchDonors = (bloodGroup = "") => {
-    let url = `https://blood-aid-backend.onrender.com/account/available_donor/`;
+    let url = `https://blood-aid-backend.vercel.app/account/available_donor/`;
     if (bloodGroup) {
       url += `?blood_group=${bloodGroup}`;
     }

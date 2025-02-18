@@ -6,7 +6,7 @@ const DonationHistory = () => {
   const username = localStorage.getItem("username");
 
   useEffect(() => {
-    fetch("https://blood-aid-backend.onrender.com/dashboard/list/", {
+    fetch("https://blood-aid-backend.vercel.app/dashboard/list/", {
       headers: {
         "content-type": "application/json",
         authorization: `Token ${localStorage.getItem("authToken")}`,

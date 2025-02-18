@@ -38,7 +38,7 @@ const Register = () => {
       password: data.password,
       confirm_password: data.confirm_password,
     };
-    fetch("https://blood-aid-backend.onrender.com/account/register/", {
+    fetch("https://blood-aid-backend.vercel.app/account/register/", {
       method: "POST",
       headers: {
         "content-type": "application/json",

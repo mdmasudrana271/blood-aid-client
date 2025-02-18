@@ -31,7 +31,7 @@ const Login = () => {
   const handleLogin = (data) => {
     const username = data.username;
     const password = data.password;
-    fetch("https://blood-aid-backend.onrender.com/account/login/", {
+    fetch("https://blood-aid-backend.vercel.app/account/login/", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ username, password }),

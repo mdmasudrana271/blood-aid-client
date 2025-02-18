@@ -6,7 +6,7 @@ const BloodRequest = () => {
   const [bloodRequest, setbloodRequest] = useState([]);
 
   useEffect(() => {
-    fetch("https://blood-aid-backend.onrender.com/event/list/", {
+    fetch("https://blood-aid-backend.vercel.app/event/list/", {
       headers: {
         "content-type": "application/json",
         authorization: `Token ${localStorage.getItem("authToken")}`,
@@ -14,7 +14,7 @@ const BloodRequest = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const pendingRequests = data.filter(
+        const pendingRequests = data?.filter(
           (request) => request.status === "pending"
         );
         setbloodRequest(pendingRequests);
@@ -29,7 +29,7 @@ const BloodRequest = () => {
     };
 
     console.log(payload);
-    fetch("https://blood-aid-backend.onrender.com/dashboard/create/", {
+    fetch("https://blood-aid-backend.vercel.app/dashboard/create/", {
       method: "POST",
       headers: {
         "content-type": "application/json",

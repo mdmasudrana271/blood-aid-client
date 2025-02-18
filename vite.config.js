@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/account": {
-        target: "https://blood-aid-backend.onrender.com",
+        target: "https://blood-aid-backend.vercel.app",
         changeOrigin: true,
         secure: false,
       },

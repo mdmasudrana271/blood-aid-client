@@ -9,7 +9,7 @@ const PostCard = ({ post }) => {
     };
 
     console.log(payload);
-    fetch("https://blood-aid-backend.onrender.com/dashboard/create/", {
+    fetch("https://blood-aid-backend.vercel.app/dashboard/create/", {
       method: "POST",
       headers: {
         "content-type": "application/json",

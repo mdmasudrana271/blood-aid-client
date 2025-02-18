@@ -22,7 +22,7 @@ const AddEvent = () => {
 
     console.log(event);
 
-    fetch("https://blood-aid-backend.onrender.com/event/create/", {
+    fetch("https://blood-aid-backend.vercel.app/event/create/", {
       method: "POST",
       headers: {
         "content-type": "application/json",
