@@ -25,7 +25,7 @@ const Contact = () => {
         <form
           noValidate=""
           className="space-y-6"
-          action="https://getform.io/f/your-form-endpoint"
+          action="https://getform.io/f/923d35e5-4392-4fdd-8a69-533de3d72d65"
           method="POST"
         >
           <div>
