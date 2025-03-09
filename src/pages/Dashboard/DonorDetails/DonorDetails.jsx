@@ -120,7 +120,9 @@ const DonorDetails = () => {
         <div className="flex justify-between items-center mt-8 border-t border-gray-300 pt-4">
           <div>
             <p className="text-sm text-gray-300">Total Donations</p>
-            <p className="text-xl font-bold">{donorData.total_donations}</p>
+            <p className="text-xl font-bold">
+              {donorData.length > 0 ? donorData.length : 0}
+            </p>
           </div>
           <div>
             <p className="text-sm text-gray-300">Last Donation Date</p>
