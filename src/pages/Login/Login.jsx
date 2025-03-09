@@ -47,7 +47,7 @@ const Login = () => {
           setUser(data.user);
           toast.success("Login successful");
           reset();
-          navigate("/dashboard/update_profile");
+          navigate("/update_profile");
         } else {
           toast.error(data.error || "Login failed");
         }

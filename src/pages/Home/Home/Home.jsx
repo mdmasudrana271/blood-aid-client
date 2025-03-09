@@ -6,7 +6,6 @@ import ServiceBanner from "../ServiceBanner/ServiceBanner";
 import RandomBanner from "../RandomBanner/RandomBanner";
 import Campaign from "../Campaign/Campaign";
 import RequestPost from "../RequestPost/RequestPost";
-import Contact from "../Contact/Contact";
 
 const Home = () => {
   return (
@@ -34,9 +33,6 @@ const Home = () => {
       </div>
       <div>
         <ServiceBanner></ServiceBanner>
-      </div>
-      <div>
-        <Contact></Contact>
       </div>
     </div>
   );

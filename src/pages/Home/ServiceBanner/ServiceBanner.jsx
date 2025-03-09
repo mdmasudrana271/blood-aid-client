@@ -1,65 +1,101 @@
-import img from "../../../assets/home/donation1.jpg";
-import img2 from "../../../assets/home/home8.jpg";
+import { FaHandsHelping, FaHeartbeat, FaUsers } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const ServiceBanner = () => {
   return (
     <>
-      <p className="text-red-600 text-center text-2xl font-bold mt-10">
-        What We Do
-      </p>
-      <h2 className="text-center text-black text-3xl md:text-6xl font-extrabold mt-10">
-        our best services
-      </h2>
-      {/* section 1 */}
-      <section className="md:h-[100vh] overflow-hidden mb-10">
-        <section className="">
-          <div className="container flex flex-col justify-center mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-            <div className="flex items-center justify-center  my-8 lg:mt-0 ">
-              <img
-                src={img}
-                alt=""
-                className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded"
-              />
-            </div>
-            <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-              <h1 className="text-5xl font-extrabold leading-none sm:text-5xl">
-                Blood Donation
-              </h1>
-              <p className="mt-6 mb-8 text-lg sm:mb-12 text-slate-600">
-                Blood Donation refers to the voluntary act of giving blood for
-                medical purposes, typically to help individuals who need blood
-                transfusions due to surgery, injury, or illness.
+      <section className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white text-center">
+        <p className="text-lg font-bold uppercase">
+          Our Commitment to Saving Lives
+        </p>
+        <h2 className="text-3xl md:text-5xl font-extrabold mt-4">
+          Essential Blood Donation Services for Life Preservation
+        </h2>
+      </section>
+
+      {/* Section 1: Blood Donation Services */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 sm:px-12 lg:px-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-center">
+          {/* Service Card 1: Blood Donation Process */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <div className="p-6 text-center">
+              <FaHandsHelping className="text-4xl text-red-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                The Blood Donation Process
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Blood donation is a straightforward and safe process that
+                involves donating blood, which is then used in emergencies,
+                surgeries, and for treating various medical conditions. Your
+                blood could be the difference between life and death for someone
+                in need.
               </p>
-              <button className="btn btn-error w-1/3 text-white">
-                Read More
+              <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200">
+                Learn More
               </button>
             </div>
           </div>
-        </section>
+
+          {/* Service Card 2: Types of Blood Donations */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <div className="p-6 text-center">
+              <FaHeartbeat className="text-4xl text-red-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                Types of Blood Donations
+              </h3>
+              <p className="text-gray-600 mb-4">
+                There are several types of blood donations, including whole
+                blood, plasma, and platelet donations. Each type plays a vital
+                role in medical treatments and helps save lives in different
+                scenarios. Learn which type suits your ability and health
+                condition.
+              </p>
+              <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          {/* Service Card 3: Benefits of Donating Blood */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <div className="p-6 text-center">
+              <FaUsers className="text-4xl text-red-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                Benefits of Donating Blood
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Donating blood not only saves lives, but also provides health
+                benefits for the donor. Regular blood donation can help reduce
+                the risk of heart disease, maintain healthy iron levels, and
+                improve overall wellbeing. It’s a win-win for both the donor and
+                the recipient.
+              </p>
+              <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
-      {/* section 2 */}
-      <section className="md:h-[100vh] overflow-hidden my-10 lg:my-0">
-        <div className="container flex flex-col justify-center mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-center">
-          <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-            <h1 className="text-5xl font-extrabold leading-none sm:text-5xl">
-              Health Check
-            </h1>
-            <p className="mt-6 mb-8 text-lg sm:mb-12 text-slate-600">
-              Health Check refers to a comprehensive evaluation of an
-              individual’s overall health through medical examinations,
-              diagnostic tests, and consultations with healthcare professionals.
-            </p>
-            <button className="btn btn-error w-1/3 text-white">
-              Read More
-            </button>
-          </div>
-          <div className="flex items-center justify-center  my-8 lg:mt-0 ">
-            <img
-              src={img2}
-              alt=""
-              className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded"
-            />
-          </div>
+
+      {/* Section 2: How to Become a Blood Donor */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-6 sm:px-12 lg:px-24 text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
+            Become a Life-Saving Blood Donor Today
+          </h2>
+          <p className="text-lg text-gray-600 mb-6">
+            Donating blood is one of the simplest and most impactful ways you
+            can contribute to your community. It only takes a small amount of
+            your time, and your donation can save up to three lives. Here’s how
+            you can get involved and help make a difference.
+          </p>
+          <NavLink
+            to="/blood-request"
+            className="bg-red-600 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:bg-red-700 transition duration-300"
+          >
+            Become a Donor
+          </NavLink>
         </div>
       </section>
     </>

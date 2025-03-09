@@ -13,28 +13,13 @@ const Register = () => {
   } = useForm();
 
   const [signUpError, setSignUPError] = useState("");
-  // const [setUserLoginEmail] = useState("");
-
-  // const imageHostKey = import.meta.env.VITE_IMGBB_API_KEY;
-  // const [passwordType, setPasswordType] = useState("password");
-
-  // toggle password type on input field
-
-  // const handlePasswordType = () => {
-  //   if (passwordType === "password") {
-  //     setPasswordType("text");
-  //     return;
-  //   } else {
-  //     setPasswordType("password");
-  //   }
-  // };
-
   const handleSignup = (data) => {
     const createdUser = {
       username: data.username,
       first_name: data.first_name,
       last_name: data.last_name,
       email: data.email,
+      phone: data.phone,
       password: data.password,
       confirm_password: data.confirm_password,
     };
@@ -135,6 +120,29 @@ const Register = () => {
               {errors.email && (
                 <p role="alert" className="text-error">
                   {errors.email?.message}
+                </p>
+              )}
+            </div>
+            {/* Phone Number Field */}
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">Phone Number</span>
+              </label>
+              <input
+                {...register("phone", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^[0-9]{10,15}$/, // Basic validation for 10-15 digit numbers
+                    message: "Enter a valid phone number",
+                  },
+                })}
+                type="text"
+                placeholder="Enter Your Phone Number"
+                className="input input-bordered w-full"
+              />
+              {errors.phone && (
+                <p role="alert" className="text-error">
+                  {errors.phone?.message}
                 </p>
               )}
             </div>

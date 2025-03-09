@@ -5,11 +5,12 @@ import Register from "../pages/Register/Register";
 import Home from "../pages/Home/Home/Home";
 import UpdateProfile from "../pages/Dashboard/UpdateProfile/UpdateProfile";
 import AddEvent from "../pages/Dashboard/AddEvent/AddEvent";
-import BloodRequest from "../pages/Dashboard/BloodRequest/BloodRequest";
-import DonationHistory from "../pages/Dashboard/DonationHistory/DonationHistory";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/shared/ErrorPage/ErrorPage";
-import DashBoardLayout from "../Layout/DashBoardLayout";
+import Profile from "../pages/Dashboard/Profile/Profile";
+import DonorDetails from "../pages/Dashboard/DonorDetails/DonorDetails";
+import Contact from "../pages/Home/Contact/Contact";
+import RequestPost from "../pages/Home/RequestPost/RequestPost";
 
 export const router = createBrowserRouter([
   {
@@ -22,26 +23,15 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "login",
-        element: <Login></Login>,
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
-        path: "signup",
-        element: <Register></Register>,
-      },
-    ],
-  },
-  {
-    path: "/dashboard",
-    element: (
-      <PrivateRoute>
-        <DashBoardLayout></DashBoardLayout>
-      </PrivateRoute>
-    ),
-    errorElement: <ErrorPage></ErrorPage>,
-    children: [
-      {
-        path: "/dashboard/update_profile",
+        path: "/update_profile",
         element: (
           <PrivateRoute>
             <UpdateProfile></UpdateProfile>
@@ -49,7 +39,7 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/events",
+        path: "/create-events",
         element: (
           <PrivateRoute>
             <AddEvent></AddEvent>
@@ -57,20 +47,28 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/request",
+        path: "/blood-request",
         element: (
           <PrivateRoute>
-            <BloodRequest></BloodRequest>
+            <RequestPost></RequestPost>
           </PrivateRoute>
         ),
       },
       {
-        path: "/dashboard/history",
-        element: (
-          <PrivateRoute>
-            <DonationHistory></DonationHistory>
-          </PrivateRoute>
-        ),
+        path: "/donor_details/:id",
+        element: <DonorDetails></DonorDetails>,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "signup",
+        element: <Register></Register>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
     ],
   },
