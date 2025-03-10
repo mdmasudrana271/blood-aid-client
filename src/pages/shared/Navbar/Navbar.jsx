@@ -23,6 +23,9 @@ const Navbar = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           {user ? (
             <>
               <li>
@@ -70,7 +73,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden absolute top-16 left-0 w-full bg-white text-black shadow-md">
+        <div className="lg:hidden absolute top-16 left-0 z-50 w-full bg-white text-black shadow-md">
           <ul className="flex flex-col items-center space-y-4 py-6">
             <li>
               <Link
@@ -79,6 +82,15 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
               >
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="hover:text-red-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
               </Link>
             </li>
             {user ? (

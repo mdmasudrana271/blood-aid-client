@@ -67,7 +67,7 @@ const DonorDetails = () => {
   return (
     <div className="container mx-auto px-4 py-10 mt-28">
       {/* Donor Profile Section */}
-      <div className="relative bg-gradient-to-r from-red-500 to-red-700 text-white p-10 rounded-2xl shadow-lg max-w-4xl mx-auto">
+      <div className="relative bg-gradient-to-r from-red-500 to-red-700 text-white p-10 rounded-2xl shadow-lg max-w-8xl mx-auto">
         <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-white rounded-full border-4 border-red-500 flex items-center justify-center shadow-lg">
           <MdBloodtype className="text-red-600 text-5xl" />
         </div>
@@ -81,9 +81,9 @@ const DonorDetails = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          {/* Left Column */}
-          <div className="flex items-center space-x-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 text-center">
+          {/* Email */}
+          <div className="flex flex-col items-center">
             <MdEmail className="text-2xl" />
             <div>
               <p className="text-sm text-gray-300">Email</p>
@@ -91,7 +91,8 @@ const DonorDetails = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-3">
+          {/* Phone */}
+          <div className="flex flex-col items-center">
             <MdPhone className="text-2xl" />
             <div>
               <p className="text-sm text-gray-300">Phone</p>
@@ -99,7 +100,8 @@ const DonorDetails = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-3">
+          {/* Location */}
+          <div className="flex flex-col items-center">
             <MdLocationOn className="text-2xl" />
             <div>
               <p className="text-sm text-gray-300">Location</p>
@@ -107,7 +109,8 @@ const DonorDetails = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-3">
+          {/* Age */}
+          <div className="flex flex-col items-center">
             <MdCalendarToday className="text-2xl" />
             <div>
               <p className="text-sm text-gray-300">Age</p>
