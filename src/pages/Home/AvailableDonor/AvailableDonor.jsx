@@ -10,6 +10,7 @@ const AvailableDonor = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetchDonors();
   }, []);
 

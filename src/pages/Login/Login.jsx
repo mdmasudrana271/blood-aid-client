@@ -124,6 +124,11 @@ const Login = () => {
                 Signup
               </Link>
             </p>
+            <div className="mt-5 border rounded text-center py-3">
+              <h2>Demo Users</h2>
+              <p>username: masud</p>
+              <p>password: asdfgH1@</p>
+            </div>
           </form>
         </div>
       </div>

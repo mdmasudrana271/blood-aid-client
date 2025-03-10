@@ -30,9 +30,12 @@ const ServiceBanner = () => {
                 blood could be the difference between life and death for someone
                 in need.
               </p>
-              <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200">
-                Learn More
-              </button>
+              <NavLink
+                to="/blood-request"
+                className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200"
+              >
+                Donate
+              </NavLink>
             </div>
           </div>
 
@@ -50,9 +53,12 @@ const ServiceBanner = () => {
                 scenarios. Learn which type suits your ability and health
                 condition.
               </p>
-              <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200">
-                Learn More
-              </button>
+              <NavLink
+                to="/blood-request"
+                className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200"
+              >
+                Donate
+              </NavLink>
             </div>
           </div>
 
@@ -70,9 +76,12 @@ const ServiceBanner = () => {
                 improve overall wellbeing. It’s a win-win for both the donor and
                 the recipient.
               </p>
-              <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200">
-                Learn More
-              </button>
+              <NavLink
+                to="/blood-request"
+                className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-200"
+              >
+                Donate
+              </NavLink>
             </div>
           </div>
         </div>
