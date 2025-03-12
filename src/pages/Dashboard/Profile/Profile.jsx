@@ -134,7 +134,10 @@ const Profile = () => {
             <span className="font-bold">{profile.last_donation_date}</span>
           </p>
           <p className="text-red-700 font-semibold text-lg">
-            Total Donations: <span className="font-bold">5</span>
+            Total Donations:{" "}
+            <span className="font-bold">
+              {history?.length ? history.length : 0}
+            </span>
           </p>
         </div>
 

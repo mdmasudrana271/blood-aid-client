@@ -39,6 +39,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/available-donors">Available Donors</Link>
+              </li>
+              <li>
                 <Link to="/profile">Profile</Link>
               </li>
               <li>
@@ -111,6 +114,15 @@ const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                   >
                     Blood Request
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/available-donors"
+                    className="hover:text-red-500 transition"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Available Donors
                   </Link>
                 </li>
                 <li>

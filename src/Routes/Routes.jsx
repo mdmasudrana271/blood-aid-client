@@ -11,6 +11,7 @@ import Profile from "../pages/Dashboard/Profile/Profile";
 import DonorDetails from "../pages/Dashboard/DonorDetails/DonorDetails";
 import Contact from "../pages/Home/Contact/Contact";
 import RequestPost from "../pages/Home/RequestPost/RequestPost";
+import AvailableDonor from "../pages/Home/AvailableDonor/AvailableDonor";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
             <RequestPost></RequestPost>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/available-donors",
+        element: <AvailableDonor></AvailableDonor>,
       },
       {
         path: "/donor_details/:id",
