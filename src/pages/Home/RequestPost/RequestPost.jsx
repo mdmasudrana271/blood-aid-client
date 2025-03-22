@@ -83,43 +83,41 @@ const RequestPost = () => {
         </div>
 
         {/* Filter Section */}
-        <div className="bg-white p-8 rounded-lg shadow mb-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex gap-6 w-full">
-              {/* Blood Group Dropdown */}
-              <select
-                className="select select-bordered w-full md:w-1/2 px-4 py-2 text-lg rounded-lg border-gray-300 shadow-sm"
-                onChange={handleBloodGroupChange}
-                value={bloodGroup}
-              >
-                <option value="">Select Blood Group</option>
-                <option value="O%2B">O+</option>
-                <option value="O-">O-</option>
-                <option value="A%2B">A+</option>
-                <option value="A-">A-</option>
-                <option value="B%2B">B+</option>
-                <option value="B-">B-</option>
-                <option value="AB%2B">AB+</option>
-                <option value="AB-">AB-</option>
-              </select>
+        <div className="bg-white p-6 md:p-8 rounded-lg shadow mb-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-around gap-4 md:gap-6">
+            {/* Blood Group Dropdown */}
+            <select
+              className="select select-bordered w-full md:w-1/3 px-4 py-2 text-lg rounded-lg border-gray-300 shadow-sm"
+              onChange={handleBloodGroupChange}
+              value={bloodGroup}
+            >
+              <option value="">Select Blood Group</option>
+              <option value="O%2B">O+</option>
+              <option value="O-">O-</option>
+              <option value="A%2B">A+</option>
+              <option value="A-">A-</option>
+              <option value="B%2B">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB%2B">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
 
-              {/* Address Input */}
-              <input
-                type="text"
-                className="input input-bordered w-full md:w-1/2 px-4 py-2 text-lg rounded-lg border-gray-300 shadow-sm"
-                placeholder="Search by Address"
-                value={address}
-                onChange={handleAddressChange}
-              />
+            {/* Address Input */}
+            <input
+              type="text"
+              className="input input-bordered w-full md:w-1/3 px-4 py-2 text-lg rounded-lg border-gray-300 shadow-sm"
+              placeholder="Search by Address"
+              value={address}
+              onChange={handleAddressChange}
+            />
 
-              {/* Filter Button */}
-              <button
-                onClick={handleFilter}
-                className="btn bg-gradient-to-r from-red-500 to-red-700 text-white w-auto px-6 py-3 text-lg font-semibold rounded-lg shadow-lg hover:bg-red-800 transition-all duration-300 transform hover:scale-105"
-              >
-                Filter
-              </button>
-            </div>
+            {/* Filter Button */}
+            <button
+              onClick={handleFilter}
+              className="btn bg-gradient-to-r from-red-500 to-red-700 text-white w-full md:w-auto px-6 py-3 text-lg font-semibold rounded-lg shadow-lg hover:bg-red-800 transition-all duration-300 transform hover:scale-105"
+            >
+              Filter
+            </button>
           </div>
         </div>
 

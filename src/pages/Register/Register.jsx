@@ -19,7 +19,6 @@ const Register = () => {
       first_name: data.first_name,
       last_name: data.last_name,
       email: data.email,
-      phone: data.phone,
       password: data.password,
       confirm_password: data.confirm_password,
     };
@@ -124,7 +123,7 @@ const Register = () => {
               )}
             </div>
             {/* Phone Number Field */}
-            <div className="form-control w-full">
+            {/* <div className="form-control w-full">
               <label className="label">
                 <span className="label-text">Phone Number</span>
               </label>
@@ -145,7 +144,7 @@ const Register = () => {
                   {errors.phone?.message}
                 </p>
               )}
-            </div>
+            </div> */}
             <div className="form-control w-full flex justify-between align-center">
               <label className="label">
                 <span className="label-text">Password</span>
